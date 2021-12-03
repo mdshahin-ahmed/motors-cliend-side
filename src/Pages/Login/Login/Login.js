@@ -1,19 +1,23 @@
 
 import React, { useState } from 'react';
-import { Col, Form, Row, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Col, Form, Row, Button, Spinner } from 'react-bootstrap';
+import { NavLink, useLocation, useHistory } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const [loginDate, setLoginData] = useState({});
+    const { user, loginUser, isLoading, authError } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
-        const newLoginData={...loginDate};
+        const newLoginData = { ...loginDate };
         newLoginData[field] = value;;
         setLoginData(newLoginData);
     }
     const handleLoginSubmit = e => {
-        alert('Done');
+        loginUser(loginDate.email, loginDate.password, location, history);
         e.preventDefault();
     }
     return (
@@ -44,10 +48,23 @@ const Login = () => {
                         </Button>
                         <br />
                         <br />
-                        <NavLink style={{textDecoration:'none'}} to='/register'>
+                        <NavLink style={{ textDecoration: 'none' }} to='/register'>
                             <p>New User? Please Register</p>
                         </NavLink>
                     </Form>
+                    {
+                        isLoading && <Spinner animation="border" variant="primary" />
+                    }
+                    {
+                        user?.email && <div className="alert alert-info" role="alert">
+                            User Login Successfully!
+                        </div>
+                    }
+                    {
+                        authError && <div class="alert alert-danger" role="alert">
+                            {authError}
+                        </div>
+                    }
                 </div>
             </div>
         </div>
