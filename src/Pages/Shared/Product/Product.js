@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Product.css';
 
 const Product = ({product}) => {
-    const {img, name, price} = product;
+    const {img, name, price,description} = product;
     return (
 
         <div className="col-10 mx-auto my-3 col-md-6 col-lg-4">
@@ -24,9 +23,10 @@ const Product = ({product}) => {
                             <span className="car-price">{price}</span>
                         </h5>
                     </div>
+                        <p>{description}</p>
                 </div>
                 <Link to='/orderPlace'>
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-primary mb-3">Buy Now</button>
                 </Link>
                 {/* <!-- card body end --> */}
             </div>
