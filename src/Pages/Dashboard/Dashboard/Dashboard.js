@@ -49,7 +49,7 @@ function ResponsiveDrawer(props) {
       {
         admin && <Box>
           <Link className='d-block text-decoration-none' to={`${url}/manageAllProducts`}>
-            <Button style={{ color: 'black' }} variant="text">Manage Add Products</Button>
+            <Button style={{ color: 'black' }} variant="text">Manage All Products</Button>
           </Link>
           <Link className='d-block text-decoration-none' to={`${url}/addProduct`}>
             <Button style={{ color: 'black' }} variant="text">Add Product</Button>

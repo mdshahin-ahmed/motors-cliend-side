@@ -3,12 +3,12 @@ import Home from './Pages/Home/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Explore from './Pages/Explore/Explore';
-import OrderPlace from './Pages/OrderPlace/OrderPlace';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import OrderPlace from './Pages/OrderPlace/OrderPlace';
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
             <PrivateRoute path='/dashboard'>
               <Dashboard></Dashboard>
             </PrivateRoute>
-            <PrivateRoute path='/orderPlace'>
+            <PrivateRoute path='/products/orderPlace/:id'>
               <OrderPlace></OrderPlace>
             </PrivateRoute>
           </Switch>

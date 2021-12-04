@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Product.css';
 
-const Product = ({ product }) => {
+const ManageProduct = ({ product, handleDeleteProduct }) => {
     const { _id, img, name, price, description } = product;
+
     return (
 
         <div className="col-12 my-3 col-md-6 col-lg-4 d-flex">
@@ -26,9 +26,9 @@ const Product = ({ product }) => {
                     </div>
                     <p>{description}</p>
                 </div>
-                <Link to={`/products/orderPlace/${_id}`}>
-                    <button  className="btn btn-primary mb-3">Buy Now</button>
-                </Link>
+                <div>
+                    <button onClick={() => handleDeleteProduct(_id)} className="btn btn-danger mb-3">Delete</button>
+                </div>
                 {/* <!-- card body end --> */}
             </div>
         </div>
@@ -36,4 +36,4 @@ const Product = ({ product }) => {
     );
 };
 
-export default Product;
+export default ManageProduct;
