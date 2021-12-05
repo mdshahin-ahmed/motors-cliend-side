@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const ManageOrder = ({ product, handleDeleteProduct }) => {
     const { _id, img, name, price, description,status } = product;

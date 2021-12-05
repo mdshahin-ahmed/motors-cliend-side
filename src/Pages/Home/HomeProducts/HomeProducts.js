@@ -1,10 +1,14 @@
-import React from 'react';
-// import Product from '../../Shared/Product/Product';
-// import Product from '../Product/Product';
-
+import React, { useState, useEffect } from 'react';
+import Product from '../../Shared/Product/Product';
 
 
 const HomeProducts = () => {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/homeProducts')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [products])
     return (
         <div className="inventory py-5">
             <div className="container">
@@ -20,9 +24,10 @@ const HomeProducts = () => {
                 {/* <!-- cars --> */}
                 <div className="row">
                     {
-                    //    products.map(product => <Product 
-                    //     product={product}
-                    //    ></Product>)
+                        products.map(product => <Product
+                            key={product._id}
+                            product={product}
+                        ></Product>)
                     }
 
                 </div>
