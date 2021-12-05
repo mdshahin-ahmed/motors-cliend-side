@@ -9,7 +9,7 @@ const OrderPlace = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`
+        const url = `https://obscure-caverns-05990.herokuapp.com/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(productData => setProduct(productData))
@@ -23,7 +23,7 @@ const OrderPlace = () => {
         const newData = { ...data, price, name, img, description }
         console.log(newData);
         newData.status = 'Pending...';
-        fetch('http://localhost:5000/orders', {
+        fetch('https://obscure-caverns-05990.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

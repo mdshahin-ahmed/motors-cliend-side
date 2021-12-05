@@ -4,7 +4,7 @@ import ManageProduct from '../../Shared/ManageProduct/ManageProduct';
 const ManageAllProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://obscure-caverns-05990.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products]);
@@ -12,7 +12,7 @@ const ManageAllProducts = () => {
     const handleDeleteProduct = id => {
         const proceed = window.confirm('Are you sure, You Want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://obscure-caverns-05990.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
