@@ -8,7 +8,7 @@ const ManageOrder = ({ product, handleDeleteProduct }) => {
         <div className="col-12 my-3 col-md-6 col-lg-4 d-flex">
             <div className="card car-card">
                 <div className='overflow-hidden'>
-                    <img className="card-img-top car-img" src={img} alt="" />
+                    <img style={{height: '250px', width:'100%'}} className="card-img-top car-img" src={img} alt="" />
                 </div>
                 {/* <!-- card body --> */}
                 <div className="card-body">
