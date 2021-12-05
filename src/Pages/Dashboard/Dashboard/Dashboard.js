@@ -45,25 +45,25 @@ function ResponsiveDrawer(props) {
     <div>
       <Toolbar />
       <Divider />
-      <Link className='d-block text-decoration-none' to='/home'>
-        <Button style={{ color: 'black' }} variant="text">Home</Button>
+      <Link style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none' to='/home'>
+        <Button style={{ color: 'black'}} variant="text">Home</Button>
       </Link>
 
       {
         admin && <Box>
-          <Link className='d-block text-decoration-none' to={`${url}/manageAllProducts`}>
+          <Link style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none' to={`${url}/manageAllProducts`}>
             <Button style={{ color: 'black' }} variant="text">Manage All Products</Button>
           </Link>
-          <Link className='d-block text-decoration-none' to={`${url}/addProduct`}>
+          <Link style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none' to={`${url}/addProduct`}>
             <Button style={{ color: 'black' }} variant="text">Add Product</Button>
           </Link>
-          <Link className='d-block text-decoration-none' to={`${url}/makeAdmin`}>
+          <Link style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none' to={`${url}/makeAdmin`}>
             <Button style={{ color: 'black' }} variant="text">Make Admin</Button>
           </Link>
-          <Link className='d-block text-decoration-none' to={`${url}/manageOrders`}>
+          <Link style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none' to={`${url}/manageOrders`}>
             <Button style={{ color: 'black' }} variant="text">Manage Orders</Button>
           </Link>
-          <Box className='d-block text-decoration-none'>
+          <Box style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none'>
             <Button onClick={logOut} style={{ color: 'black' }} variant="text">Log Out</Button>
           </Box>
         </Box>
@@ -71,16 +71,16 @@ function ResponsiveDrawer(props) {
 
       {
         !admin && <Box>
-          <Link className='d-block text-decoration-none' to={`${url}/myOrders`}>
+          <Link style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none' to={`${url}/myOrders`}>
             <Button style={{ color: 'black' }} variant="text">My Orders</Button>
           </Link>
-          <Link className='d-block text-decoration-none' to={`${url}/review`}>
+          <Link style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none' to={`${url}/review`}>
             <Button style={{ color: 'black' }} variant="text">Review</Button>
           </Link>
-          <Link className='d-block text-decoration-none' to={`${url}/pay`}>
+          <Link style={{textAlign:'left', marginLeft:'0px'}} className='d-block text-decoration-none' to={`${url}/pay`}>
             <Button style={{ color: 'black' }} variant="text">Pay</Button>
           </Link>
-          <Box className='d-block text-decoration-none'>
+          <Box style={{textAlign:'left', marginLeft:'10px'}} className='d-block text-decoration-none'>
             <Button onClick={logOut} style={{ color: 'black' }} variant="text">Log Out</Button>
           </Box>
         </Box>

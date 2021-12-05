@@ -18,7 +18,7 @@ const SingleReview = ({ review }) => {
                     fullSymbol="fas fa-star fill-star"
                 />
 
-                <h6 className=" text-capitalize pt-3">{email}</h6>
+                <h6 className=" pt-3">{email}</h6>
 
                 <p className="text-muted text-left mx-auto">{comment}</p>
 

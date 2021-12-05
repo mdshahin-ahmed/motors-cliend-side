@@ -7,7 +7,7 @@
 .height-max {
     height: calc(100vh - 76px);
     background: url("../../../image/headerBcg.jpeg") center/cover fixed no-repeat;
-    /* animation-name: zoom; */
+    animation-name: zoom;
     animation-duration: 15s;
     animation-delay: 2s;
     animation-iteration-count: infinite;
