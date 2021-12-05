@@ -51,7 +51,7 @@ const OrderPlace = () => {
             <form className='mx-auto' onSubmit={handleSubmit(onSubmit)}>
                 <div style={{ maxWidth: '500px', margin: '0 auto' }}>
                     <input className='form-control mb-4' defaultValue={user.displayName} type='text' {...register("userName", { required: true })} />
-                    <input className='form-control mb-4' disabled defaultValue={user.email} type='email' {...register("email")} />
+                    <input className='form-control mb-4' defaultValue={user.email} type='email' {...register("email")} />
                     <input className='form-control mb-4' placeholder='Your Address' type='text' {...register("address")} />
                     <input className='btn btn-primary mb-4' type="submit" value='Order' />
                 </div>
