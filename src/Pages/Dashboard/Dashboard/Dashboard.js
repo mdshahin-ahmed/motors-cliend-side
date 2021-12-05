@@ -24,6 +24,9 @@ import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import Welcome from '../Welcome/Welcome';
 import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
 import ManageOrders from '../ManageOrders/ManageOrders';
+import Pay from '../Pay/Pay';
+import MyOrders from '../MyOrders/MyOrders';
+import Review from '../Review/Review';
 
 const drawerWidth = 200;
 
@@ -67,8 +70,21 @@ function ResponsiveDrawer(props) {
       }
 
       {
-
-      }     
+        !admin && <Box>
+          <Link className='d-block text-decoration-none' to={`${url}/myOrders`}>
+            <Button style={{ color: 'black' }} variant="text">My Orders</Button>
+          </Link>
+          <Link className='d-block text-decoration-none' to={`${url}/review`}>
+            <Button style={{ color: 'black' }} variant="text">Review</Button>
+          </Link>
+          <Link className='d-block text-decoration-none' to={`${url}/pay`}>
+            <Button style={{ color: 'black' }} variant="text">Pay</Button>
+          </Link>
+          <Box className='d-block text-decoration-none'>
+            <Button onClick={logOut} style={{ color: 'black' }} variant="text">Log Out</Button>
+          </Box>
+        </Box>
+      }
 
 
     </div>
@@ -140,9 +156,18 @@ function ResponsiveDrawer(props) {
         <Toolbar />
 
         <Switch>
-          
+
           <Route exact path={path}>
             <Welcome></Welcome>
+          </Route>
+          <Route path={`${path}/pay`}>
+            <Pay></Pay>
+          </Route>
+          <Route path={`${path}/myOrders`}>
+            <MyOrders></MyOrders>
+          </Route>
+          <Route path={`${path}/review`}>
+            <Review></Review>
           </Route>
 
           <AdminRoute path={`${path}/manageAllProducts`}>
