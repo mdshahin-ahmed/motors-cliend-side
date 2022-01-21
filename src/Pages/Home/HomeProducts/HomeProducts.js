@@ -18,7 +18,7 @@ const HomeProducts = () => {
             <h1 className="font-weight-bold align-self-center mx-1 mb-0">
               Our
             </h1>
-            <h1 className="section-title-special mx-1">Services</h1>
+            <h1 className="section-title-special mx-1">Products</h1>
           </div>
         </div>
         {/* <!-- section title end --> */}

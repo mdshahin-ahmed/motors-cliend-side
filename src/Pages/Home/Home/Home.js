@@ -6,6 +6,7 @@ import Gallery from "../Gallery/Gallery";
 import HomeProducts from "../HomeProducts/HomeProducts";
 import MyChoose from "../MyChoose/MyChoose";
 import Reviews from "../Reviews/Reviews";
+import Services from "../Services/Services";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <MyChoose></MyChoose>
       <HomeProducts></HomeProducts>
       <Gallery></Gallery>
+      <Services></Services>
       <Reviews></Reviews>
       <Footer></Footer>
     </div>
