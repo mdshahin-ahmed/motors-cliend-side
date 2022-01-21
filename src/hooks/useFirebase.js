@@ -66,7 +66,7 @@ const useFirebase = () => {
     }, []);
 
     useEffect(() => {
-        fetch(`https://obscure-caverns-05990.herokuapp.com/users/${user.email}`)
+        fetch(`http://localhost:5000/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -84,7 +84,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName) => {
         const user = { email, displayName };
-        fetch('https://obscure-caverns-05990.herokuapp.com/users', {
+        fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

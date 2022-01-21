@@ -14,7 +14,7 @@ const Review = () => {
             alert('Please give a ratting value 1 to 5');
             return;
         }
-        axios.post('https://obscure-caverns-05990.herokuapp.com/reviews', data)
+        axios.post('http://localhost:5000/reviews', data)
             .then(res => {
 
                 if (res.data.insertedId) {

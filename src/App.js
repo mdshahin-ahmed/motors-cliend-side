@@ -1,40 +1,39 @@
-import './App.css';
-import Home from './Pages/Home/Home/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Explore from './Pages/Explore/Explore';
-import Login from './Pages/Login/Login/Login';
-import Register from './Pages/Login/Register/Register';
-import AuthProvider from './Context/AuthProvider/AuthProvider';
-import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
-import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
-import OrderPlace from './Pages/OrderPlace/OrderPlace';
-
+import "./App.css";
+import Home from "./Pages/Home/Home/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Explore from "./Pages/Explore/Explore";
+import Login from "./Pages/Login/Login/Login";
+import Register from "./Pages/Login/Register/Register";
+import AuthProvider from "./Context/AuthProvider/AuthProvider";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import OrderPlace from "./Pages/OrderPlace/OrderPlace";
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
           <Switch>
-            <Route exact path='/'>
+            <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path='/home'>
+            <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path='/login'>
+            <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path='/register'>
+            <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path='/explore'>
+            <Route path="/explore">
               <Explore></Explore>
             </Route>
-            <PrivateRoute path='/dashboard'>
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
-            <PrivateRoute path='/products/orderPlace/:id'>
+            <PrivateRoute path="/products/orderPlace/:id">
               <OrderPlace></OrderPlace>
             </PrivateRoute>
           </Switch>
@@ -45,3 +44,7 @@ function App() {
 }
 
 export default App;
+
+/* 
+https://obscure-caverns-05990.herokuapp.com
+*/
