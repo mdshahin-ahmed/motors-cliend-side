@@ -38,7 +38,7 @@ const Login = () => {
                   name="email"
                   onBlur={handleOnChange}
                   type="email"
-                  placeholder="Your Email"
+                  placeholder="Your Email (admin@admin.com)"
                 />
               </Col>
             </Form.Group>
@@ -56,7 +56,7 @@ const Login = () => {
                   name="password"
                   onBlur={handleOnChange}
                   type="password"
-                  placeholder="Password"
+                  placeholder="Password (123456)"
                 />
               </Col>
             </Form.Group>
