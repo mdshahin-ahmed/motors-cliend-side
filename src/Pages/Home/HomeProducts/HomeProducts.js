@@ -5,7 +5,7 @@ import { Spinner } from "react-bootstrap";
 const HomeProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/homeProducts")
+    fetch("https://obscure-caverns-05990.herokuapp.com/homeProducts")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);

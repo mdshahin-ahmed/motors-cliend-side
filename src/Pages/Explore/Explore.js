@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Headers from "../Shared/Headers/Headers";
 import Product from "../Shared/Product/Product";
+import { Spinner } from "react-bootstrap";
 
 const Explore = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://obscure-caverns-05990.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);
@@ -30,9 +31,17 @@ const Explore = () => {
 
           {/* <!-- cars --> */}
           <div className="row">
-            {products.map((product) => (
-              <Product key={product._id} product={product}></Product>
-            ))}
+            {products.length ? (
+              products.map((product) => (
+                <Product key={product._id} product={product}></Product>
+              ))
+            ) : (
+              <Spinner
+                style={{ margin: "0 auto" }}
+                animation="border"
+                variant="primary"
+              />
+            )}
           </div>
         </div>
       </div>
