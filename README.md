@@ -2,9 +2,9 @@
 
 This project Live site Link: https://motors-61118.web.app/
 
-This project client side Github Link: https://github.com/mdshahin-ahmed/spicy-client-side
+This project client side Github Link: https://github.com/mdshahin-ahmed/motors-cliend-side
 
-This project server side Github Link: https://github.com/mdshahin-ahmed/spicy-server-side
+This project server side Github Link: https://github.com/mdshahin-ahmed/motors-server-side
 
 ## The benefit of these Projects
 
