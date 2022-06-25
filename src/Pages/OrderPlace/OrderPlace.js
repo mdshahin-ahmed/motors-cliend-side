@@ -52,6 +52,7 @@ const OrderPlace = () => {
           <input
             className="form-control mb-4"
             defaultValue={user.displayName}
+            readOnly
             type="text"
             {...register("userName", { required: true })}
           />
@@ -59,6 +60,7 @@ const OrderPlace = () => {
             className="form-control mb-4"
             defaultValue={user.email}
             type="email"
+            readOnly
             {...register("email")}
           />
           <input
