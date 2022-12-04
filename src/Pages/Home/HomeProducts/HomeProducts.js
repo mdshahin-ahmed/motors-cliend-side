@@ -5,7 +5,7 @@ import { Spinner } from "react-bootstrap";
 const HomeProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://obscure-caverns-05990.herokuapp.com/homeProducts")
+    fetch("https://motors-server-side.vercel.app/homeProducts")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);

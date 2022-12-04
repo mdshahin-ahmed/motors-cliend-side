@@ -4,7 +4,7 @@ import SingleReview from "../SingleReview/SingleReview";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://obscure-caverns-05990.herokuapp.com/reviews")
+    fetch("https://motors-server-side.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

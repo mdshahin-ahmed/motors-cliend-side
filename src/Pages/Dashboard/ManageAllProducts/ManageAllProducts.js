@@ -4,7 +4,7 @@ import ManageProduct from "../../Shared/ManageProduct/ManageProduct";
 const ManageAllProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://obscure-caverns-05990.herokuapp.com/products")
+    fetch("https://motors-server-side.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);
@@ -12,7 +12,7 @@ const ManageAllProducts = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure, You Want to delete?");
     if (proceed) {
-      const url = `https://obscure-caverns-05990.herokuapp.com/products/${id}`;
+      const url = `https://motors-server-side.vercel.app/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })

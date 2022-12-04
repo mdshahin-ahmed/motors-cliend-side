@@ -9,7 +9,7 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     const user = { email };
 
-    fetch("https://obscure-caverns-05990.herokuapp.com/users/admin", {
+    fetch("https://motors-server-side.vercel.app/users/admin", {
       method: "put",
       headers: {
         "content-type": "application/json",

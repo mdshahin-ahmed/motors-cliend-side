@@ -8,7 +8,7 @@ const AddProduct = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://obscure-caverns-05990.herokuapp.com/products", data)
+      .post("https://motors-server-side.vercel.app/products", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Added Successfully!");

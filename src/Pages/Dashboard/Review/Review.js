@@ -14,7 +14,7 @@ const Review = () => {
       return;
     }
     axios
-      .post("https://obscure-caverns-05990.herokuapp.com/reviews", data)
+      .post("https://motors-server-side.vercel.app/reviews", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Added Successfully!");

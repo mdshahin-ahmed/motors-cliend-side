@@ -11,7 +11,7 @@ import Paper from "@mui/material/Paper";
 const ManageOrders = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://obscure-caverns-05990.herokuapp.com/orders")
+    fetch("https://motors-server-side.vercel.app/orders")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);
@@ -19,7 +19,7 @@ const ManageOrders = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure, You Want to delete?");
     if (proceed) {
-      const url = `https://obscure-caverns-05990.herokuapp.com/orders/${id}`;
+      const url = `https://motors-server-side.vercel.app/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
