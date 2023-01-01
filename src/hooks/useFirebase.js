@@ -71,7 +71,7 @@ const useFirebase = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`https://motors-server-side.vercel.app/users/${user.email}`)
+    fetch(`https://motors-wlpp.onrender.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -90,7 +90,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName) => {
     const user = { email, displayName };
-    fetch("https://motors-server-side.vercel.app/users", {
+    fetch("https://motors-wlpp.onrender.com/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",

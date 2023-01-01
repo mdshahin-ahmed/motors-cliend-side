@@ -7,7 +7,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    const url = `https://motors-server-side.vercel.app/userOrders?email=${user.email}`;
+    const url = `https://motors-wlpp.onrender.com/userOrders?email=${user.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrders(data));
@@ -16,7 +16,7 @@ const MyOrders = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure, You Want to delete?");
     if (proceed) {
-      const url = `https://motors-server-side.vercel.app/orders/${id}`;
+      const url = `https://motors-wlpp.onrender.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })

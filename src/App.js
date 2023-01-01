@@ -48,3 +48,9 @@ export default App;
 /* 
 https://obscure-caverns-05990.herokuapp.com
 */
+
+// https://motors-server-side.vercel.app/
+
+// https://motors-wlpp.onrender.com/
+
+// https://motors-wlpp.onrender.com/

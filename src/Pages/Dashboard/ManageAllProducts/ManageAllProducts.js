@@ -4,7 +4,7 @@ import ManageProduct from "../../Shared/ManageProduct/ManageProduct";
 const ManageAllProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://motors-server-side.vercel.app/products")
+    fetch("https://motors-wlpp.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);
@@ -12,7 +12,7 @@ const ManageAllProducts = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure, You Want to delete?");
     if (proceed) {
-      const url = `https://motors-server-side.vercel.app/products/${id}`;
+      const url = `https://motors-wlpp.onrender.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })

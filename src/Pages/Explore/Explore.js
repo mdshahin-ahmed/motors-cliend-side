@@ -6,7 +6,7 @@ import { Spinner } from "react-bootstrap";
 const Explore = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://motors-server-side.vercel.app/products")
+    fetch("https://motors-wlpp.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);

@@ -9,7 +9,7 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     const user = { email };
 
-    fetch("https://motors-server-side.vercel.app/users/admin", {
+    fetch("https://motors-wlpp.onrender.com/users/admin", {
       method: "put",
       headers: {
         "content-type": "application/json",

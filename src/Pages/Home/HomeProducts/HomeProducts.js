@@ -5,10 +5,10 @@ import { Spinner } from "react-bootstrap";
 const HomeProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://motors-server-side.vercel.app/homeProducts")
+    fetch("https://motors-wlpp.onrender.com/homeProducts")
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  }, [products]);
+  }, []);
   return (
     <div className="inventory py-5">
       <div className="container">

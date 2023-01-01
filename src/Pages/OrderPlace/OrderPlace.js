@@ -9,7 +9,7 @@ const OrderPlace = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const url = `https://motors-server-side.vercel.app/products/${id}`;
+    const url = `https://motors-wlpp.onrender.com/products/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((productData) => setProduct(productData));
@@ -23,7 +23,7 @@ const OrderPlace = () => {
     const newData = { ...data, price, name, img, description };
     console.log(newData);
     newData.status = "Pending...";
-    fetch("https://motors-server-side.vercel.app/orders", {
+    fetch("https://motors-wlpp.onrender.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

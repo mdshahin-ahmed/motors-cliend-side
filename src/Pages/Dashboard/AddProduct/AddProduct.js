@@ -8,7 +8,7 @@ const AddProduct = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://motors-server-side.vercel.app/products", data)
+      .post("https://motors-wlpp.onrender.com/products", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Added Successfully!");
